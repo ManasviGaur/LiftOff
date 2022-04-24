@@ -108,7 +108,7 @@ class Game:
 
     def game_intro(self):
         if self.intro == True:
-            randomBg=random.choice([1,2,3,4])
+            randomBg=random.choice([1,2,3,4,5,6,7])
             background = pygame.image.load("images/background"+str(randomBg)+".png").convert_alpha()
             
             while self.intro:
@@ -153,8 +153,8 @@ class Game:
         screen.blit(screen_text, (x, y))
 
     def mainGame(self):
-        randomBg=random.choice([1,2,3,4])
-        randomBocket=random.choice([1,2,3])
+        randomBg=random.choice([1,2,3,4,5,6,7])
+        randomBocket=random.choice([1,2,3,4,5])
         randomObs = random.choice([1,2])
         background = pygame.image.load("images/background"+str(randomBg)+".png").convert_alpha()
         rocket = pygame.image.load("images/rocket"+str(randomBocket)+".png").convert_alpha()
@@ -214,4 +214,3 @@ class Game:
 
 LiftOff = Game()
 LiftOff.game_intro()
-# LiftOff.mainGame()
